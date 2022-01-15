@@ -1,0 +1,11 @@
+ent numero1 = 14.;
+Ent numero2 = 1.3;
+Cad .1 = "Marcianito";
+
+Ent numero3 = numero1 + numero2;
+
+MOSTRAR ( numero3 );
+
+Si ( numero1 : 3 ){
+	Mostrar ( numero1 );
+}
