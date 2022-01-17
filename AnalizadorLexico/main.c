@@ -184,7 +184,7 @@ int main () {
         else if(car == '"'){//Si se presenta una comilla
             lexemaCad(arch, car);
         }
-        else if(isascii(car) && car != ' ' && car != ';' && car != 10 && car != 13){//Si es un símbolo
+        else if(isascii(car) && car != ' ' && car != ';' && car != 10 && car != 13 && car != 9){//Si es un símbolo
             lexemaSimb(car);
         }
     }

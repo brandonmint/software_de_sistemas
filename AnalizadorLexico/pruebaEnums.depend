@@ -31,3 +31,19 @@
 	<string.h>
 	"cabecera.h"
 
+1633514870 source:c:\users\acast\documents\github\software_de_sistemas\analizadorlexico\lista.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"cabecera.h"
+
+1635182901 c:\users\acast\documents\github\software_de_sistemas\analizadorlexico\cabecera.h
+
+1642401791 source:c:\users\acast\documents\github\software_de_sistemas\analizadorlexico\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"cabecera.h"
+
