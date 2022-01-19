@@ -173,23 +173,29 @@ int main () {
     FILE * arch = fopen("hola.txt", "rt"); //Abrimos documento de texto
     char car = ' ';
 
-    while((car = fgetc(arch)) != EOF){ //EOF = End of file (Fin de archivo)
+    if (arch == NULL){ //Validación, si el archivo de código no existe entonces no iniciar programa
+        printf("\nError de apertura del archivo. \n\n");
+    }else{
+        while((car = fgetc(arch)) != EOF){ //EOF = End of file (Fin de archivo)
 
-        if(isalpha(car)){//Si se presenta una letra
-            lexemaId(arch, car);
+            if(isalpha(car)){//Si se presenta una letra
+                lexemaId(arch, car);
+            }
+            else if(isdigit(car)){//Si se presenta un número
+                lexemaNum(arch, car);
+            }
+            else if(car == '"'){//Si se presenta una comilla
+                lexemaCad(arch, car);
+            }
+            else if(isascii(car) && car != ' ' && car != ';' && car != 10 && car != 13 && car != 9){//Si es un símbolo
+                lexemaSimb(car);
+            }
         }
-        else if(isdigit(car)){//Si se presenta un número
-            lexemaNum(arch, car);
-        }
-        else if(car == '"'){//Si se presenta una comilla
-            lexemaCad(arch, car);
-        }
-        else if(isascii(car) && car != ' ' && car != ';' && car != 10 && car != 13 && car != 9){//Si es un símbolo
-            lexemaSimb(car);
-        }
+
+        printf("-TOKENS CREADOS-\n\n");
+        ImprimirLista(cabeza);
     }
-    printf("-TOKENS CREADOS-\n\n");
-    ImprimirLista(cabeza);
+
 
     return 0;
 }
