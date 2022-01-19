@@ -194,6 +194,13 @@ int main () {
 
         printf("-TOKENS CREADOS-\n\n");
         ImprimirLista(cabeza);
+
+        SintaxisLeer(cabeza);
+        SintaxisMostrar(cabeza);
+        SintaxisMientras(cabeza);
+        SintaxisPara(cabeza);
+        SintaxisSi(cabeza);
+        SintaxisVariables(cabeza);
     }
 
 

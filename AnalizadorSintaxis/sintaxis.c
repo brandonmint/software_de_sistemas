@@ -5,20 +5,20 @@
 
 #include "cabecera.h"
 
-void SintaxisLeer(){
+void SintaxisLeer(NODO *cabeza){
 }
 
-void SintaxisMostrar(){
+void SintaxisMostrar(NODO *cabeza){
 }
 
-void SintaxisMientras(){
+void SintaxisMientras(NODO *cabeza){
 }
 
-void SintaxisPara(){
+void SintaxisPara(NODO *cabeza){
 }
 
-void SintaxisSi(){
+void SintaxisSi(NODO *cabeza){
 }
 
-void SintaxisVariables(){
+void SintaxisVariables(NODO *cabeza){
 }
