@@ -192,15 +192,15 @@ int main () {
             }
         }
 
-        printf("-TOKENS CREADOS-\n\n");
-        ImprimirLista(cabeza);
+        //printf("-TOKENS CREADOS-\n\n");
+        //ImprimirLista(cabeza);
 
-        SintaxisLeer(cabeza);
-        SintaxisMostrar(cabeza);
-        SintaxisMientras(cabeza);
-        SintaxisPara(cabeza);
-        SintaxisSi(cabeza);
-        SintaxisVariables(cabeza);
+        SintaxisLeer(cabeza,1);
+        SintaxisMostrar(cabeza,1);
+        SintaxisMientras(cabeza,1);
+        SintaxisPara(cabeza,1);
+        SintaxisSi(cabeza,1);
+        SintaxisVariables(cabeza,1);
     }
 
 

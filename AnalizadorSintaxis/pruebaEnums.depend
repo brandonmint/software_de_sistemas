@@ -56,14 +56,14 @@
 
 1635182901 c:\users\acast\documents\github\software_de_sistemas\analizadorsintaxis\cabecera.h
 
-1642581934 source:c:\users\acast\documents\github\software_de_sistemas\analizadorsintaxis\main.c
+1643349389 source:c:\users\acast\documents\github\software_de_sistemas\analizadorsintaxis\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	"cabecera.h"
 
-1642579757 source:c:\users\acast\documents\github\software_de_sistemas\analizadorsintaxis\sintaxis.c
+1643349968 source:c:\users\acast\documents\github\software_de_sistemas\analizadorsintaxis\sintaxis.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
