@@ -9,8 +9,8 @@ const char palabReserv[][100] = {"Leer", "Mostrar", "Mientras", "Romper", "Para"
 
 NODO *cabeza = NULL;
 
-/*Esta función genera un lexema de un símbolo de distintos tipos;
-    Al final se llama a la función generarToken(int, char*, int)*/
+/*Esta funciÃ³n genera un lexema de un sÃ­mbolo de distintos tipos;
+    Al final se llama a la funciÃ³n generarToken(int, char*, int)*/
 void lexemaSimb(char car){
     char lexema[] = {car, '\0'};
 
@@ -48,8 +48,8 @@ void lexemaSimb(char car){
     }
 }
 
-/*Esta función genera un lexema de tipo Cadena, el lexema se genera con comillas;
-    Al final se llama a la función generarToken(int, char*, int)*/
+/*Esta funciÃ³n genera un lexema de tipo Cadena, el lexema se genera con comillas;
+    Al final se llama a la funciÃ³n generarToken(int, char*, int)*/
 void lexemaCad(FILE *arch, char car){
     char str1[2] = {car, '\0'};
     char lexema[100] = "";
@@ -73,8 +73,8 @@ void lexemaCad(FILE *arch, char car){
     generarToken(9, lexema, 4);
 }
 
-/*Esta función genera un lexema de tipo número entero o decimal
-    Al final se llama a la función generarToken(int, char*, int)*/
+/*Esta funciÃ³n genera un lexema de tipo nÃºmero entero o decimal
+    Al final se llama a la funciÃ³n generarToken(int, char*, int)*/
 void lexemaNum(FILE *arch, char car){
     char str1[2] = {car, '\0'};
     char lexema[100] = "";
@@ -107,9 +107,9 @@ void lexemaNum(FILE *arch, char car){
     cantPuntos==0 ? generarToken(2, lexema, 0) : generarToken(2, lexema, 3);
 }
 
-/*Esta función genera un lexema tipo Identificador y llama a la función
+/*Esta funciÃ³n genera un lexema tipo Identificador y llama a la funciÃ³n
     existePalRes(char * lexema), una vez concluido si existe esa palabra reservada
-        o no,llama a la función generarToken(int, char*, int)*/
+        o no,llama a la funciÃ³n generarToken(int, char*, int)*/
 void lexemaId(FILE *arch, char car){
     char str1[2] = {car, '\0'};
     char lexema[100] = "";
@@ -137,11 +137,11 @@ void lexemaId(FILE *arch, char car){
 
 }
 
-/*Esta función recibe un lexema(cadena) y devuelve 1 si dicho
+/*Esta funciÃ³n recibe un lexema(cadena) y devuelve 1 si dicho
     lexema existe dentro de las palabras reservadas y 0 si no existe*/
 int existePalRes(char lexema[]){
     int i=0, bandera=0;
-    for(i == 0; i < 4; i++){ //El valor límite de i dependerá del tamaño del arreglo palabReserv
+    for(i == 0; i < 4; i++){ //El valor lÃ­mite de i dependerÃ¡ del tamaÃ±o del arreglo palabReserv
         if(strcmp(lexema, palabReserv[i]) == 0){
             bandera = 1;
         }
@@ -150,7 +150,7 @@ int existePalRes(char lexema[]){
     return bandera;
 }
 
-/*Esta función genera un token con los datos recibidos de los
+/*Esta funciÃ³n genera un token con los datos recibidos de los
     generadores de lexemas e inserta el token generado en una lista doblemente
         enlazada.*/
 void generarToken(int tipoToken, char lexema[], int tipoDato){
@@ -173,7 +173,7 @@ int main () {
     FILE * arch = fopen("hola.txt", "rt"); //Abrimos documento de texto
     char car = ' ';
 
-    if (arch == NULL){ //Validación, si el archivo de código no existe entonces no iniciar programa
+    if (arch == NULL){ //ValidaciÃ³n, si el archivo de cÃ³digo no existe entonces no iniciar programa
         printf("\nError de apertura del archivo. \n\n");
     }else{
         while((car = fgetc(arch)) != EOF){ //EOF = End of file (Fin de archivo)
@@ -181,13 +181,13 @@ int main () {
             if(isalpha(car)){//Si se presenta una letra
                 lexemaId(arch, car);
             }
-            else if(isdigit(car)){//Si se presenta un número
+            else if(isdigit(car)){//Si se presenta un nÃºmero
                 lexemaNum(arch, car);
             }
             else if(car == '"'){//Si se presenta una comilla
                 lexemaCad(arch, car);
             }
-            else if(isascii(car) && car != ' ' && car != ';' && car != 10 && car != 13 && car != 9){//Si es un símbolo
+            else if(isascii(car) && car != ' ' && car != ';' && car != 10 && car != 13 && car != 9){//Si es un sÃ­mbolo
                 lexemaSimb(car);
             }
         }
@@ -207,3 +207,4 @@ int main () {
     return 0;
 }
 
+//Prueba brandon
